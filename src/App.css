@@ -1,0 +1,38 @@
+header {
+	padding: 40px 0;
+	display: flex;
+	border-bottom: 1px solid rgb(81, 106, 93);
+}
+header img {
+	margin: 3em auto;
+}
+header button {
+	margin: auto;
+	width: auto;
+}
+.auth_form {
+	margin: 3em auto;
+	width: 320px;
+}
+
+.auth_form input {
+	font-size: 1em;
+	box-sizing: border-box;
+	margin: 10px auto;
+	padding: 10px;
+	width: 100%;
+}
+button {
+	width: 100%;
+	font-size: 1em;
+	color: rgb(81, 106, 93);
+	background-color: transparent;
+	border: 1px solid rgb(81, 106, 93);
+	padding: 10px;
+	margin: 10px auto;
+}
+
+button:hover {
+	background-color: rgb(81, 106, 93);
+	color: rgb(255, 255, 255);
+}
