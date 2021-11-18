@@ -19,7 +19,7 @@ export const SingUp = (props) => {
 					.then((result) => {
 						console.log(result);
 						if (result.length === 0) {
-							alert("please confirm your email");
+							alert("please check your email");
 						}
 						if (result.length !== 0) {
 							alert("this user already exist");
@@ -28,7 +28,7 @@ export const SingUp = (props) => {
 					.catch((error) => console.log("error", error));
 			}}
 		>
-			Sing up
+			Sign up
 		</button>
 	);
 };
