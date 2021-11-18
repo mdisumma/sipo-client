@@ -18,7 +18,7 @@ function App() {
 	return (
 		<div>
 			<Routes>
-				<Route path="/" element={<SignPage />} />
+				<Route path="/" element={<SignPage />} exact />
 				<Route path="/admin" element={<AdminPage />} />
 				<Route path="/user" element={<UserPage />} />
 			</Routes>

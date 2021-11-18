@@ -20,7 +20,7 @@ export const LogIn = (props) => {
 					.then((result) => {
 						console.log(result);
 						if (result) {
-							// window.location.href = `/user/`;
+							window.location.href = `/user/`;
 						}
 					})
 					.catch((error) => console.log("error", error));

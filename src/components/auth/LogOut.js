@@ -8,13 +8,15 @@ export const LogOut = (emailValue, passwordValue) => {
 			type="button"
 			value="logout"
 			onClick={async () => {
+				const user = supabase.auth.user();
 				const session = supabase.auth.session();
-
+				console.log(session);
+				console.log(user);
 				fetch(`http://localhost:3001/logout/`, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
-						email: session.user.email,
+						email: emailValue,
 					}),
 				})
 					.then((response) => response.json())
