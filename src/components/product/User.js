@@ -24,7 +24,6 @@ export function User() {
 		trash: "",
 	};
 	const [productQuantity, setProductQuantity] = useState("");
-	const [addProduct, setAddProduct] = useState({});
 	const [orderList, setOrderList] = useState([orderHead]);
 
 	if (data) {
@@ -75,7 +74,7 @@ export function User() {
 									type="button"
 									value="add"
 									onClick={() => {
-										setAddProduct({
+										const addProduct = {
 											name: item.name,
 											number: 1 * productQuantity,
 											unit: item.pack,
@@ -83,7 +82,7 @@ export function User() {
 											price: item.price,
 											totPrice: item.price * productQuantity,
 											trash: <BiTrash />,
-										});
+										};
 
 										orderList.push(addProduct);
 										console.log(addProduct);
