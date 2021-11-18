@@ -19,7 +19,10 @@ export const LogIn = (props) => {
 					.then((response) => response.json())
 					.then((result) => {
 						console.log(result);
-						if (result) {
+						if (result.data[0].admin === true) {
+							window.location.href = `/admin/`;
+						}
+						if (result.data[0].admin === false) {
 							window.location.href = `/user/`;
 						}
 					})
