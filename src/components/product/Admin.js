@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import "./product.css";
 
 export function Admin() {
-	const [idValue, setIdValue] = useState("");
 	const [nameValue, setNameValue] = useState("");
 	const [packValue, setPackValue] = useState("");
 	const [imageValue, setImageValue] = useState("");
@@ -23,12 +22,6 @@ export function Admin() {
 			<>
 				<>
 					<div className="product_form">
-						<input
-							type="text"
-							value={idValue}
-							onChange={(e) => setIdValue(e.target.value)}
-							placeholder="Id"
-						/>
 						<input
 							type="text"
 							value={nameValue}
@@ -63,7 +56,6 @@ export function Admin() {
 								method: "POST",
 								headers: { "Content-Type": "application/json" },
 								body: JSON.stringify({
-									id: idValue,
 									name: nameValue,
 									pack: packValue,
 									image: imageValue,
@@ -80,7 +72,7 @@ export function Admin() {
 				</>
 				{Data.map((item) => {
 					return (
-						<div key={item.id} className="product">
+						<div key={item.name} className="product">
 							<div className="product_image">
 								<img src={item.image} alt={item.name} />
 							</div>
@@ -116,7 +108,6 @@ export function Admin() {
 											method: "DELETE",
 											headers: { "Content-Type": "application/json" },
 											body: JSON.stringify({
-												id: item.id,
 												name: item.name,
 												pack: item.pack,
 												image: item.image,

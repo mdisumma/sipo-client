@@ -14,7 +14,6 @@ export function User() {
 	}, []);
 
 	const orderHead = {
-		id: 0,
 		name: "Name",
 		number: "Item",
 		unit: "Unit",
